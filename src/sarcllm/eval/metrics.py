@@ -11,7 +11,6 @@ Conventions
   not a class of its own, so it never creates a spurious 4th F1 term.
 - Macro-F1 averages over labels present in gold OR predictions, with zero_division=0,
   which is what sklearn.f1_score(average="macro") does with no `labels` argument.
-  `test_reproduce_baselines` checks this matches the ICARC-MS numbers.
 - Penalty = non-sarcastic Macro-F1 − sarcastic Macro-F1.
   [CHECK] confirm this is the ICARC-MS definition before Gate G1.
 """
