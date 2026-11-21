@@ -1,0 +1,39 @@
+# Maps the thesis split files onto the §5.1 record schema.
+# Edit the right-hand side to match the column names in your thesis CSV/Excel files.
+
+inputs:
+  train: ../thesis/data/train.csv
+  val:   ../thesis/data/val.csv
+  test:  ../thesis/data/test.csv
+
+columns:
+  id:            comment_id
+  post_id:       post_id
+  text:          comment
+  context_text:  post_caption
+  sentiment:     sentiment
+  is_sarcastic:  sarcasm
+  script_type:   null        # null -> detected with data.detect_script (log thresholds in RESEARCH_LOG.md)
+
+# Raw label value -> schema value. Add every spelling that appears in the thesis files.
+sentiment_values:
+  negative: negative
+  Negative: negative
+  neutral:  neutral
+  Neutral:  neutral
+  positive: positive
+  Positive: positive
+  0: negative
+  1: neutral
+  2: positive
+
+sarcasm_values:
+  0: 0
+  1: 1
+  "no": 0
+  "yes": 1
+  non-sarcastic: 0
+  sarcastic: 1
+
+# If the thesis files have no id column, set id to null and ids are built as <split>_<row index>.
+id_prefix: {train: tr_, val: va_, test: te_}
