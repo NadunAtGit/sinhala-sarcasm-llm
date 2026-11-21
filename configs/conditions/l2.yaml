@@ -1,0 +1,7 @@
+id: L2
+name: Fixed few-shot
+pipeline: single_pass
+examples: few_shot          # prompts/few_shot.json — 6 train examples, one per sarcasm x sentiment cell
+calls_per_item: 1
+research: [RQ3]
+description: L1 + the same 6 annotated train examples for every item.

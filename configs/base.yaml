@@ -1,0 +1,17 @@
+# Shared settings for every LLM condition. Frozen (by git tag) at Gate G1.
+frozen: false            # runner refuses split=test until this is true (set only at Gate G1)
+
+generation:
+  temperature: 0.0
+  max_tokens: 2048       # includes gpt-oss reasoning tokens
+  reasoning_effort: low  # [DECISION at pilot] low vs medium
+  json_mode: true
+
+input:
+  text_field: text_enc         # encoder-equivalent view (notebook 01b)
+  context_field: context_enc
+
+paths:
+  prompts: prompts
+  runs: runs
+  cache: data/cache/llm_cache.sqlite

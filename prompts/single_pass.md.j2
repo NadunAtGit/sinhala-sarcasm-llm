@@ -1,0 +1,17 @@
+{% if examples -%}
+ANNOTATED EXAMPLES from the same corpus (labels assigned by the human annotator):
+{% for ex in examples %}
+[{{ ex.id }}]
+Caption: {{ ex.context }}
+Comment: {{ ex.text }}
+Gold labels: sarcastic = {{ "yes" if ex.is_sarcastic else "no" }}; intended sentiment = {{ ex.sentiment }}
+{% endfor %}
+{% endif -%}
+ITEM TO ANNOTATE
+Script: {{ item.script_label }}
+Caption: {{ item.context }}
+Comment: {{ item.text }}
+{% if note %}
+Note: {{ note }}
+{% endif %}
+Follow the decision procedure and return only the JSON object.

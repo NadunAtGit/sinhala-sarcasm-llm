@@ -1,0 +1,62 @@
+{
+  "rule": "train only; one per sarcasm x sentiment cell; script per cell as CELL_SCRIPT; comment 15-200 chars; caption 1-300 chars; random_state=42",
+  "cell_script": {
+    "1_negative": "sinhala",
+    "0_negative": "latin",
+    "1_neutral": "latin",
+    "0_neutral": "mixed",
+    "1_positive": "mixed",
+    "0_positive": "sinhala"
+  },
+  "notes": [],
+  "examples": [
+    {
+      "id": "P545C40",
+      "text": "ආයෙ ඉතින්😏...\"උසනම් සිකුරිටි🤌මිටි නම් කම්කරු\"😂👌කියල රස්සා බෙදපු උන්දැගෙ පක්ෂෙනෙ🤌🤣🤣🤣",
+      "context": "ස.ජ.බයේ බුද්ධිමට්ටම අනෙක් පක්ෂවලට ලංවීමටවත් නොහැකි මට්ටමකි. 💚",
+      "script_label": "Sinhala script",
+      "is_sarcastic": 1,
+      "sentiment": "negative"
+    },
+    {
+      "id": "P358C57",
+      "text": "Nikan labunanam sadda nathuwa kala hitapan made yanne nathuwa",
+      "context": "Mr Kottu එකේ රයිස් එක ඇත්තටම රස ?",
+      "script_label": "Latin script (Singlish or English)",
+      "is_sarcastic": 0,
+      "sentiment": "negative"
+    },
+    {
+      "id": "P742C43",
+      "text": "Adeh kukku dileka neda adala thiyenne 😂😂",
+      "context": "නූගත් ගැහැණුන්ට Tiktok එකක් තියනව කියන්නෙ බඩුම තමයි 😅",
+      "script_label": "Latin script (Singlish or English)",
+      "is_sarcastic": 1,
+      "sentiment": "neutral"
+    },
+    {
+      "id": "P39C71",
+      "text": "ගෙවල් ඉබේ hadhenawada",
+      "context": "ඇත්තටම ගෙයක rent එක කියන්නේ කිසිම වියදමක් නැතුව ලබන ආදායමක්. ගොඩක් owners ල Maintenance කරන්නෙම නෑ. කොහොමත් ගෙට අලාභ හානියක් උනොත් අය කරගන්නවනේ. මම නම් කියන්නේ කොළඹ උපරිම මිල විය යුත්තේ රුපියල් 50000ක් පමණයි.",
+      "script_label": "mixed Sinhala and Latin script",
+      "is_sarcastic": 0,
+      "sentiment": "neutral"
+    },
+    {
+      "id": "P532C23",
+      "text": "STF,එකටත් කාලෙකට පස්සෙ ගිනිඅවි පුහුණුවකට (හරඹයක්)සදහා ඉඩහසර ලබා දුන්නාට රජයට රාජ්‍ය නායකයාට පැසසුම් කරන්න ඕනි.ඒ කතාවලට පහුගිය සති කීපයේම කළ කී දේවලට්,දෙවියො කෝපවෙල හෝ ඉඩහසර ලබාදුන්නා වගේ(ට)",
+      "context": "මීගමුව නිකන් නන්දිකඩාල් වගේ. තියපු වෙඩි වල හැටියට හවස් වෙද්දි Result එක හම්බෙයි.",
+      "script_label": "mixed Sinhala and Latin script",
+      "is_sarcastic": 1,
+      "sentiment": "positive"
+    },
+    {
+      "id": "P755C12",
+      "text": "උඹල වීඩියෝ කර කර කියන්න දෙයක් නැහැ බං.කොහොමත් මතුගම සිරිවර්ධන ෆුඩ් කියන්නේ ගැම්මක් තමයි ඉතින්.",
+      "context": "Siriwardana food cafe වැඩිපුර රස මොකක්ද? රයිස් වලටද කොත්තු වලටද ඔයා වැඩි පුරම කැමති?",
+      "script_label": "Sinhala script",
+      "is_sarcastic": 0,
+      "sentiment": "positive"
+    }
+  ]
+}

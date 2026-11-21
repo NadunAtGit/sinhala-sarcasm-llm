@@ -1,0 +1,7 @@
+id: L1
+name: Zero-shot
+pipeline: single_pass
+examples: none
+calls_per_item: 1
+research: [RQ1, RQ3]
+description: System prompt (annotation rules) + target comment and caption. No examples.
