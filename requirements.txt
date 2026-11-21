@@ -19,3 +19,4 @@ pytest==9.2.0
 pyarrow==26.0.1
 ipykernel==7.1.0 
 jupyterlab==4.5.3
+transformers==5.23.0
