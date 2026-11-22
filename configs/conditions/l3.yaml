@@ -1,0 +1,10 @@
+id: L3
+name: Retrieved few-shot
+pipeline: single_pass
+examples: retrieved        # top-k train neighbours (exact cosine, bge-m3), most similar first
+k: 8                       # [DECISION at pilot] 4 vs 8; ties -> 4
+max_per_post: 2            # pre-stated before any neighbour was inspected
+view: comment                 # set by the pre-stated rule in notebook 06 (comment | comment_caption)
+calls_per_item: 1
+research: [RQ3]
+description: L1 + the k most similar annotated train comments for each item.
